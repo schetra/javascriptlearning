@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './index';
-import {findByDataAutomationID} from './../../../Utils';
+import Header from './header';
+import { findByDataAutomationID } from '../../../Utils/utils';
 
 const setUp = (props={}) => {
     const component = shallow(<Header {...props} />);
@@ -15,11 +15,11 @@ describe('header component', () => {
     });
 
     it('should render without errors', () => {
-        const wrapper = findByDataAutomationID(component, '.headerComponent');
+        const wrapper = findByDataAutomationID(component, 'headerComponent');
         expect(wrapper.length).toBe(1);
     });
     it('should render a logo', () => {
-        const logo = findByDataAutomationID(component, '.logoIMG');
+        const logo = findByDataAutomationID(component, 'logoIMG');
         expect(logo.length).toBe(1);
     });  
 });           
