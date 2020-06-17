@@ -22,11 +22,11 @@ describe('Headline Component', () => {
                     age: 23,
                     onlineStatus: false
                 }]
-            }
-            const propsErr = checkProps(Headline, expectedProps)
+            };
+            const propsErr = checkProps(Headline, expectedProps);
             expect(propsErr).toBeUndefined();
-        })
-    })
+        });
+    });
 
 
     describe('Have props', () => {
